@@ -10,7 +10,7 @@ node {
         echo 'Cloning the repo'
         git(
             branch: 'main',
-            url: 'https://github.com/farzeen-ali/CICD-Jenkins-AWS'
+            url: 'https://github.com/Sonia3712/CICD-jenkins-aws.git'
         )
     }
 
@@ -25,7 +25,7 @@ node {
             cd ${appDir}
             sudo npm install
             sudo npm run build
-            sudo fuser -k 3000/tcp || true
+            sudo fuser -k 3001/tcp || true
             npm run start
         """
     }
